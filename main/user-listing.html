@@ -5,11 +5,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sheltos - User listing page">
+    <meta name="description" content="Sheltos - User property listing page">
     <meta name="keywords" content="sheltos">
     <meta name="author" content="sheltos">
     <link rel="icon" href="../assets/images/favicon.png" type="image/x-icon" />
-    <title>Sheltos - User listing page</title>
+    <title>Sheltos - User property listing page</title>
 
    <!--Google font-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,600i,700,700i,800,800i"
@@ -17,6 +17,9 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,500i,700,700i" rel="stylesheet">
+
+    <!-- magnific css -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/magnific-popup.css">
 
     <!-- animate css -->
     <link rel="stylesheet" type="text/css" href="../assets/css/animate.css">
@@ -569,7 +572,7 @@
                     <nav aria-label="breadcrumb" class="theme-breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Create property</li>
+                            <li class="breadcrumb-item active" aria-current="page">My listing</li>
                         </ol>
                     </nav>
                 </div>
@@ -611,16 +614,11 @@
                             </div>
                             <div class="dashboard-list">
                                 <ul class="nav nav-tabs right-line-tab">
-                                    <li class="nav-item"><a class="nav-link"
-                                            href="user-dashboard.html">Dashboard</a></li>
-                                    <li class="nav-item"><a class="nav-link"
-                                            href="user-listing.html">My Listing</a></li>
-                                    <li class="nav-item"><a class="nav-link active"
-                                            href="user-create.html">create property</a></li>
                                     <li class="nav-item"><a class="nav-link" href="user-profile.html">My profile</a>
                                     </li>
-                                    <li class="nav-item"><a class="nav-link" href="user-favourites.html">favourites</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="user-payment.html">Cards & payment</a></li>
+                                    <li class="nav-item"><a class="nav-link active"
+                                            href="user-listing.html">My Typology</a></li>
+
                                     <li class="nav-item"><a class="nav-link" href="user-privacy.html">Privacy</a></li>
                                     <li class="nav-item"><a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#logout" class="nav-link">Log out</a></li>
                                 </ul>
@@ -629,113 +627,51 @@
                     </div>
                     <div class="col-lg-9">
                         <div class="dashboard-content">
-                            <div class="create-tab" id="create-property">
-                                <div class="property-wizard common-card">
-                                    <div class="common-header">
-                                        <h5>Create property</h5>
-                                    </div>
-                                    <div class="create-property-form">
-                                        <div class="form-inputs">
-                                            <h6>Basic information</h6>
-                                            <form class="row gx-2 gx-sm-3">
-                                                <div class="form-group col-sm-4">
-                                                    <label>Property Type</label>
-                                                    <input type="text" class="form-control" placeholder="villa">
+                            <div class="tab-listing" id="listing">
+                                <div class="property-section">
+                                    <div class="property-grid-2 ratio_63">
+                                        <div class="filter-panel">
+                                            <div class="top-panel">
+                                                <div>
+                                                    <h2>My selected Typology</h2>
                                                 </div>
-                                                <div class="form-group col-sm-4">
-                                                    <label>Property Status</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="left-sidebar filter-bottom-content">
+                                            <h6 class="d-lg-none d-block text-end"><a href="javascript:void(0)"
+                                                    class="close-filter-bottom">Close filter</a></h6>
+                                            <div class="row">
+                                                <div class="col-lg-4">
                                                     <div class="dropdown">
-                                                        <span class="dropdown-toggle font-rubik" data-bs-toggle="dropdown"><span>For sale</span> <i class="fas fa-angle-down"></i></span>
+                                                        <span class="dropdown-toggle font-rubik" data-bs-toggle="dropdown"><span>Property
+                                                                Status</span> <i class="fas fa-angle-down"></i></span>
                                                         <div class="dropdown-menu text-start">
+                                                            <a class="dropdown-item" href="javascript:void(0)">Property Status</a>
                                                             <a class="dropdown-item" href="javascript:void(0)">For Rent</a>
                                                             <a class="dropdown-item" href="javascript:void(0)">For Sale</a>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="form-group col-sm-4">
-                                                    <label>Property Price</label>
-                                                    <input type="text" class="form-control" placeholder="$2800">
-                                                </div>
-                                                <div class="form-group col-sm-4">
-                                                    <label>Max Rooms</label>
+                                                <div class="col-lg-4">
                                                     <div class="dropdown">
-                                                        <span class="dropdown-toggle font-rubik" data-bs-toggle="dropdown"><span>1</span> <i class="fas fa-angle-down"></i></span>
+                                                        <span class="dropdown-toggle font-rubik" data-bs-toggle="dropdown"><span>Property
+                                                                Type</span> <i class="fas fa-angle-down"></i></span>
                                                         <div class="dropdown-menu text-start">
-                                                            <a class="dropdown-item" href="javascript:void(0)">2</a>
-                                                            <a class="dropdown-item" href="javascript:void(0)">3</a>
-                                                            <a class="dropdown-item" href="javascript:void(0)">4</a>
-                                                            <a class="dropdown-item" href="javascript:void(0)">5</a>
-                                                            <a class="dropdown-item" href="javascript:void(0)">6</a>
+                                                            <a class="dropdown-item" href="javascript:void(0)">Property Type</a>
+                                                            <a class="dropdown-item" href="javascript:void(0)">Apartment</a>
+                                                            <a class="dropdown-item" href="javascript:void(0)">Family House</a>
+                                                            <a class="dropdown-item" href="javascript:void(0)">Cottage</a>
+                                                            <a class="dropdown-item" href="javascript:void(0)">Condominium</a>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="form-group col-sm-4">
-                                                    <label>Beds</label>
+                                                <div class="col-lg-4">
                                                     <div class="dropdown">
-                                                        <span class="dropdown-toggle font-rubik" data-bs-toggle="dropdown"><span>1</span> <i class="fas fa-angle-down"></i></span>
+                                                        <span class="dropdown-toggle font-rubik" data-bs-toggle="dropdown"><span>Property
+                                                                Location</span> <i class="fas fa-angle-down"></i></span>
                                                         <div class="dropdown-menu text-start">
-                                                            <a class="dropdown-item" href="javascript:void(0)">2</a>
-                                                            <a class="dropdown-item" href="javascript:void(0)">3</a>
-                                                            <a class="dropdown-item" href="javascript:void(0)">4</a>
-                                                            <a class="dropdown-item" href="javascript:void(0)">5</a>
-                                                            <a class="dropdown-item" href="javascript:void(0)">6</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group col-sm-4">
-                                                    <label>Baths</label>
-                                                    <div class="dropdown">
-                                                        <span class="dropdown-toggle font-rubik" data-bs-toggle="dropdown"><span>1</span> <i class="fas fa-angle-down"></i></span>
-                                                        <div class="dropdown-menu text-start">
-                                                            <a class="dropdown-item" href="javascript:void(0)">2</a>
-                                                            <a class="dropdown-item" href="javascript:void(0)">3</a>
-                                                            <a class="dropdown-item" href="javascript:void(0)">4</a>
-                                                            <a class="dropdown-item" href="javascript:void(0)">5</a>
-                                                            <a class="dropdown-item" href="javascript:void(0)">6</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group col-sm-4">
-                                                    <label>Area</label>
-                                                    <input type="text" class="form-control" placeholder="85 sq ft">
-                                                </div>
-                                                <div class="form-group col-sm-4">
-                                                    <label>Price</label>
-                                                    <input type="text" class="form-control" placeholder="$3000">
-                                                </div>
-                                                <div class="form-group col-sm-4">
-                                                    <label>Agencies</label>
-                                                    <div class="dropdown">
-                                                        <span class="dropdown-toggle font-rubik" data-bs-toggle="dropdown"><span>Premiere</span> <i class="fas fa-angle-down"></i></span>
-                                                        <div class="dropdown-menu text-start">
-                                                            <a class="dropdown-item" href="javascript:void(0)">Blue Sky</a>
-                                                            <a class="dropdown-item" href="javascript:void(0)">Zephyr</a>
-                                                            <a class="dropdown-item" href="javascript:void(0)">Premiere</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group col-sm-12">
-                                                    <label>Description</label>
-                                                    <textarea class="form-control" rows="4"></textarea>
-                                                </div>
-                                            </form>
-                                        </div>
-                                        <div class="form-inputs">
-                                            <h6>Address</h6>
-                                            <form class="row gx-3">
-                                                <div class="form-group col-sm-6">
-                                                    <label>Address</label>
-                                                    <input type="text" class="form-control" placeholder="Address of your property">
-                                                </div>
-                                                <div class="form-group col-sm-6">
-                                                    <label>Zip code</label>
-                                                    <input type="number" class="form-control" placeholder="39702">
-                                                </div>
-                                                <div class="form-group col-sm-4">
-                                                    <label>Any Country</label>
-                                                    <div class="dropdown">
-                                                        <span class="dropdown-toggle font-rubik" data-bs-toggle="dropdown"><span>Austria</span> <i class="fas fa-angle-down"></i></span>
-                                                        <div class="dropdown-menu text-start">
+                                                            <a class="dropdown-item" href="javascript:void(0)">Property Location</a>
                                                             <a class="dropdown-item" href="javascript:void(0)">Austria</a>
                                                             <a class="dropdown-item" href="javascript:void(0)">Brazil</a>
                                                             <a class="dropdown-item" href="javascript:void(0)">New york</a>
@@ -743,60 +679,153 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="form-group col-sm-4">
-                                                    <label>Any City</label>
+                                                <div class="col-lg-4">
                                                     <div class="dropdown">
-                                                        <span class="dropdown-toggle font-rubik" data-bs-toggle="dropdown"><span>Amreli</span> <i class="fas fa-angle-down"></i></span>
+                                                        <span class="dropdown-toggle font-rubik" data-bs-toggle="dropdown"><span>Max
+                                                                Rooms</span> <i class="fas fa-angle-down"></i></span>
                                                         <div class="dropdown-menu text-start">
-                                                            <a class="dropdown-item" href="javascript:void(0)">Gandhinagar</a>
-                                                            <a class="dropdown-item" href="javascript:void(0)">Bharuch</a>
-                                                            <a class="dropdown-item" href="javascript:void(0)">Amreli</a>
-                                                            <a class="dropdown-item" href="javascript:void(0)">Ahmadabad</a>
+                                                            <a class="dropdown-item" href="javascript:void(0)">Max Rooms</a>
+                                                            <a class="dropdown-item" href="javascript:void(0)">1</a>
+                                                            <a class="dropdown-item" href="javascript:void(0)">2</a>
+                                                            <a class="dropdown-item" href="javascript:void(0)">3</a>
+                                                            <a class="dropdown-item" href="javascript:void(0)">4</a>
+                                                            <a class="dropdown-item" href="javascript:void(0)">5</a>
+                                                            <a class="dropdown-item" href="javascript:void(0)">6</a>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="form-group col-sm-4">
-                                                    <label>Landmark</label>
-                                                    <input type="text" class="form-control" placeholder="landmark place name">
-                                                </div>
-                                            </form>
-                                        </div>
-                                        <div class="form-inputs">
-                                            <h6>Gallery</h6>
-                                            <form class="dropzone" id="multiFileUpload" action="/upload.php">
-                                                <div class="dz-message needsclick"><i class="fas fa-cloud-upload-alt"></i>
-                                                  <h6>Drop files here or click to upload.</h6><span class="note needsclick">(This is just a demo dropzone. Selected files are <strong>not</strong> actually uploaded.)</span>
-                                                </div>
-                                              </form>
-                                              <form class="row gx-3">
-                                                    <div class="form-group col-sm-12">
-                                                        <label>Video (mp4)</label>
-                                                        <input type="text" class="form-control" placeholder="mp4 video link">
-                                                    </div>
-                                                    <div class="form-group col-sm-12">
-                                                        <label>Additional features</label>
-                                                        <div class="feature-checkbox">
-                                                            <label for="chk-ani">
-                                                                <input class="checkbox_animated color-2" id="chk-ani" type="checkbox"> Emergency Exit
-                                                            </label>
-                                                            <label for="chk-ani1">
-                                                                <input class="checkbox_animated color-2" id="chk-ani1" type="checkbox"> CCTV
-                                                            </label>
-                                                            <label for="chk-ani2">
-                                                                <input class="checkbox_animated color-2" id="chk-ani2" type="checkbox"> Free Wi-Fi
-                                                            </label>
-                                                            <label for="chk-ani3">
-                                                                <input class="checkbox_animated color-2" id="chk-ani3" type="checkbox">  Free Parking In The Area
-                                                            </label>
-                                                            <label for="chk-ani4">
-                                                                <input class="checkbox_animated color-2" id="chk-ani4" type="checkbox">  Air Conditioning
-                                                            </label>
+                                                <div class="col-lg-4">
+                                                    <div class="dropdown">
+                                                        <span class="dropdown-toggle font-rubik" data-bs-toggle="dropdown"><span>Bed</span> <i
+                                                                class="fas fa-angle-down"></i></span>
+                                                        <div class="dropdown-menu text-start">
+                                                            <a class="dropdown-item" href="javascript:void(0)">Bed</a>
+                                                            <a class="dropdown-item" href="javascript:void(0)">1</a>
+                                                            <a class="dropdown-item" href="javascript:void(0)">2</a>
+                                                            <a class="dropdown-item" href="javascript:void(0)">3</a>
+                                                            <a class="dropdown-item" href="javascript:void(0)">4</a>
                                                         </div>
                                                     </div>
-                                              </form>
+                                                </div>
+                                                <div class="col-lg-4">
+                                                    <div class="dropdown">
+                                                        <span class="dropdown-toggle font-rubik" data-bs-toggle="dropdown"><span>Bath</span> <i
+                                                                class="fas fa-angle-down"></i></span>
+                                                        <div class="dropdown-menu text-start">
+                                                            <a class="dropdown-item" href="javascript:void(0)">Bath</a>
+                                                            <a class="dropdown-item" href="javascript:void(0)">1</a>
+                                                            <a class="dropdown-item" href="javascript:void(0)">2</a>
+                                                            <a class="dropdown-item" href="javascript:void(0)">3</a>
+                                                            <a class="dropdown-item" href="javascript:void(0)">4</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="text-end">
-                                            <button type="submit" class="btn btn-gradient color-2 btn-pill">Add property</button>
+                                        <div class="property-2 row column-sm zoom-gallery property-label property-grid list-view">
+                                            <div class="col-md-12">
+                                                <div class="property-box">
+                                                    <div class="property-image">
+                                                        <div class="property-slider">
+                                                            <a href="javascript:void(0)">
+                                                                <img src="../assets/images/property/10.jpg" class="bg-img" alt="">
+                                                            </a>
+                                                            <a href="javascript:void(0)">
+                                                                <img src="../assets/images/property/10.jpg" class="bg-img" alt="">
+
+                                                            </a>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="property-details">
+                                                        <span class="font-roboto">LR123/123</span>
+                                                        <div class="my-listing font-roboto">Chosen on 20th July 2024</div>
+                                                        <a href="single-property-8.html">
+                                                            <h3>Merrick in Spring Way</h3>
+                                                        </a>
+                                                        <p class="font-roboto">Elegant retreat in a quiet Coral Gables setting. This home provides wonderful entertaining spaces with a chef
+                                                            kitchen opening…</p>
+                                                        <ul>
+                                                            <li><img src="../assets/images/svg/icon/double-bed.svg" class="img-fluid" alt="">Bed : 4</li>
+                                                            <li><img src="../assets/images/svg/icon/bathroom.svg" class="img-fluid" alt="">Baths : 4</li>
+                                                            <li><img src="../assets/images/svg/icon/square-ruler-tool.svg" class="img-fluid ruler-tool" alt="">Sq Ft : 5000</li>
+                                                        </ul>
+                                                        <div class="property-btn d-flex">
+                                                            <span> </span>
+                                                            <button type="button"  onclick="document.location='360view.html'" class="btn btn-dashed btn-pill color-2">View in Detail</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="property-box">
+                                                    <div class="property-image">
+                                                        <div class="property-slider">
+                                                            <a href="javascript:void(0)">
+                                                                <img src="../assets/images/property/10.jpg" class="bg-img" alt="">
+                                                            </a>
+                                                            <a href="javascript:void(0)">
+                                                                <img src="../assets/images/property/10.jpg" class="bg-img" alt="">
+
+                                                            </a>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="property-details">
+                                                        <span class="font-roboto">LR123/123</span>
+                                                        <div class="my-listing font-roboto">Chosen on 20th July 2024</div>
+                                                        <a href="single-property-8.html">
+                                                            <h3>Merrick in Spring Way</h3>
+                                                        </a>
+                                                        <p class="font-roboto">Elegant retreat in a quiet Coral Gables setting. This home provides wonderful entertaining spaces with a chef
+                                                            kitchen opening…</p>
+                                                        <ul>
+                                                            <li><img src="../assets/images/svg/icon/double-bed.svg" class="img-fluid" alt="">Bed : 4</li>
+                                                            <li><img src="../assets/images/svg/icon/bathroom.svg" class="img-fluid" alt="">Baths : 4</li>
+                                                            <li><img src="../assets/images/svg/icon/square-ruler-tool.svg" class="img-fluid ruler-tool" alt="">Sq Ft : 5000</li>
+                                                        </ul>
+                                                        <div class="property-btn d-flex">
+                                                            <span> </span>
+                                                            <button type="button"  onclick="document.location='360view.html'" class="btn btn-dashed btn-pill color-2">View in Detail</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="property-box">
+                                                    <div class="property-image">
+                                                        <div class="property-slider">
+                                                            <a href="javascript:void(0)">
+                                                                <img src="../assets/images/property/10.jpg" class="bg-img" alt="">
+                                                            </a>
+                                                            <a href="javascript:void(0)">
+                                                                <img src="../assets/images/property/10.jpg" class="bg-img" alt="">
+
+                                                            </a>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="property-details">
+                                                        <span class="font-roboto">LR123/123</span>
+                                                        <div class="my-listing font-roboto">Chosen on 20th July 2024</div>
+                                                        <a href="single-property-8.html">
+                                                            <h3>Merrick in Spring Way</h3>
+                                                        </a>
+                                                        <p class="font-roboto">Elegant retreat in a quiet Coral Gables setting. This home provides wonderful entertaining spaces with a chef
+                                                            kitchen opening…</p>
+                                                        <ul>
+                                                            <li><img src="../assets/images/svg/icon/double-bed.svg" class="img-fluid" alt="">Bed : 4</li>
+                                                            <li><img src="../assets/images/svg/icon/bathroom.svg" class="img-fluid" alt="">Baths : 4</li>
+                                                            <li><img src="../assets/images/svg/icon/square-ruler-tool.svg" class="img-fluid ruler-tool" alt="">Sq Ft : 5000</li>
+                                                        </ul>
+                                                        <div class="property-btn d-flex">
+                                                            <span> </span>
+                                                            <button type="button"  onclick="document.location='360view.html'" class="btn btn-dashed btn-pill color-2">View in Detail</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
                                         </div>
                                     </div>
                                 </div>
@@ -1105,6 +1134,10 @@
     <script src="../assets/js/feather-icon/feather.min.js"></script>
     <script src="../assets/js/feather-icon/feather-icon.js"></script>
 
+    <!-- magnific js -->
+    <script src="../assets/js/jquery.magnific-popup.js"></script>
+    <script src="../assets/js/zoom-gallery.js"></script>
+
     <!-- slick js -->
     <script src="../assets/js/slick.js"></script>
     <script src="../assets/js/slick-animation.min.js"></script>
@@ -1112,10 +1145,6 @@
 
     <!-- Bootstrap js-->
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Dropzone js -->
-    <script src="../assets/js/dropzone/dropzone.js"></script>
-    <script src="../assets/js/dropzone/dropzone-script.js"></script>
 
     <!-- Template js-->
     <script src="../assets/js/script.js"></script>

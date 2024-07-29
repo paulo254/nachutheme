@@ -5,11 +5,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sheltos - User listing page">
+    <meta name="description" content="Sheltos - Signup wizard page">
     <meta name="keywords" content="sheltos">
     <meta name="author" content="sheltos">
     <link rel="icon" href="../assets/images/favicon.png" type="image/x-icon" />
-    <title>Sheltos - User listing page</title>
+    <title>Sheltos - Signup wizard page</title>
 
    <!--Google font-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,600i,700,700i,800,800i"
@@ -565,11 +565,11 @@
         <div class="container">
             <div class="breadcrumb-content">
                 <div>
-                    <h2>Dashboard</h2>
+                    <h2>Acceptance & Typology Choice</h2>
                     <nav aria-label="breadcrumb" class="theme-breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Create property</li>
+                            <li class="breadcrumb-item"><a href="user-profile.html">Profile</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Accept terms</li>
                         </ol>
                     </nav>
                 </div>
@@ -578,235 +578,500 @@
     </section>
     <!-- breadcrumb end -->
 
-    <!-- user dashboard section start -->
-    <section class="user-dashboard small-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3">
-                        <div class="sidebar-user sticky-cls">
-                            <div class="user-profile">
+    <!-- sign up section start -->
+    <section class="property-wizard horizontal-wizard">
+        <div class="container">
+            <div class="row wizard-box">
+                <div class="col-lg-8 col-sm-10">
+                    <div class="wizard-step-container theme-card">
+                        <ul class="wizard-steps">
+                            <li class="step-container step-1 active">
                                 <div class="media">
-                                    <div class="change-pic">
-                                        <img src="../assets/images/avatar/3.jpg" class="img-fluid update_img" alt="">
-                                        <div class="change-hover">
-                                            <button type="button" class="btn"><i data-feather="camera"></i></button>
-                                            <input class="updateimg" type="file" name="img" onchange="readURL(this,0)">
-                                        </div>
+                                    <div class="step-icon">
+                                        <i data-feather="check"></i>
+                                        <span>1</span>
                                     </div>
                                     <div class="media-body">
-                                        <h5>Zack Lee</h5>
-                                        <h6 class="font-roboto">zackle@gmail.com</h6>
-                                        <h6 class="font-roboto mb-0">+91 846 - 547 - 210</h6>
+                                        <h5>Terms</h5>
+                                        <h6>Acceptance of terms </h6>
                                     </div>
                                 </div>
-                                <div class="connected-social">
-                                    <h6>Connect with</h6>
-                                    <ul class="agent-social">
-                                        <li><a href="https://www.facebook.com/" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="https://twitter.com/" class="twitter"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="https://account.google.com" class="google"><i class="fab fa-google"></i></a></li>
-                                        <li><a href="https://www.linkedin.com/" class="linkedin"><i class="fab fa-linkedin-in"></i></a></li>
-                                    </ul>
+                            </li>
+                            <li class="step-container step-2">
+                                <div class="media">
+                                    <div class="step-icon">
+                                        <i data-feather="check"></i>
+                                        <span>2</span>
+                                    </div>
+                                    <div class="media-body">
+                                        <h5>Typology Choice</h5>
+                                        <h6>Set your preferred Typology</h6>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="dashboard-list">
-                                <ul class="nav nav-tabs right-line-tab">
-                                    <li class="nav-item"><a class="nav-link"
-                                            href="user-dashboard.html">Dashboard</a></li>
-                                    <li class="nav-item"><a class="nav-link"
-                                            href="user-listing.html">My Listing</a></li>
-                                    <li class="nav-item"><a class="nav-link active"
-                                            href="user-create.html">create property</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="user-profile.html">My profile</a>
-                                    </li>
-                                    <li class="nav-item"><a class="nav-link" href="user-favourites.html">favourites</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="user-payment.html">Cards & payment</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="user-privacy.html">Privacy</a></li>
-                                    <li class="nav-item"><a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#logout" class="nav-link">Log out</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-9">
-                        <div class="dashboard-content">
-                            <div class="create-tab" id="create-property">
-                                <div class="property-wizard common-card">
-                                    <div class="common-header">
-                                        <h5>Create property</h5>
+                            </li>
+                            <li class="step-container step-3">
+                                <div class="media">
+                                    <div class="step-icon">
+                                        <i data-feather="check"></i>
+                                        <span>3</span>
                                     </div>
-                                    <div class="create-property-form">
-                                        <div class="form-inputs">
-                                            <h6>Basic information</h6>
-                                            <form class="row gx-2 gx-sm-3">
-                                                <div class="form-group col-sm-4">
-                                                    <label>Property Type</label>
-                                                    <input type="text" class="form-control" placeholder="villa">
-                                                </div>
-                                                <div class="form-group col-sm-4">
-                                                    <label>Property Status</label>
-                                                    <div class="dropdown">
-                                                        <span class="dropdown-toggle font-rubik" data-bs-toggle="dropdown"><span>For sale</span> <i class="fas fa-angle-down"></i></span>
-                                                        <div class="dropdown-menu text-start">
-                                                            <a class="dropdown-item" href="javascript:void(0)">For Rent</a>
-                                                            <a class="dropdown-item" href="javascript:void(0)">For Sale</a>
+                                    <div class="media-body">
+                                        <h5>Confirm</h5>
+                                        <h6>submission</h6>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="wizard-form-details log-in">
+                            <div class="wizard-step-1 d-block">
+                                <div class="title-3 text-start">
+                                    <h2>Get started</h2>
+                                </div>
+                                <div class="terms-wrap">
+                                    <div class="terms-wrapper" id="intro">
+                                        <h4>Introduction</h4>
+                                        <p>These Website Standard Terms and Conditions written on this webpage shall manage your use of our website, Sheltos accessible at sheltos.com.</p>
+                                        <p>These Terms will be applied fully and affect to your use of this Website. By using this Website, you agreed to accept all terms and conditions written in here. You must not use this Website if you disagree with any of these Website Standard Terms and Conditions.</p>
+                                    </div>
+                                    <div class="terms-wrapper" id="restriction">
+                                        <h4>Restrictions</h4>
+                                        <p>You are specifically restricted from all of the following:</p>
+                                        <ul>
+                                            <li>
+                                                selling, sublicensing and/or otherwise commercializing any Website material;
+                                            </li>
+                                            <li>
+                                                publishing any Website material in any other media;
+                                            </li>
+                                            <li>
+                                                using this Website in any way that is or may be damaging to this Website;
+                                            </li>
+                                            <li>
+                                                using this Website to engage in any advertising or marketing.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="terms-wrapper" id="limitation">
+                                        <h4>Limitation of liability</h4>
+                                        <p>In no event shall Pixelstrap, nor any of its officers, directors and employees, shall be held liable for anything arising out of or in any way connected with your use of this Website whether such liability is under contract.  Pixelstrap, including its officers, directors and employees shall not be held liable for any indirect, consequential or special liability arising out of or in any way related to your use of this Website.</p>
+                                    </div>
+                                    <div class="terms-wrapper" id="reservation">
+                                        <h4>Reservation of Rights</h4>
+                                        <p>We reserve the right to request that you remove all links or any particular link to our Website. You approve to immediately remove all links to our Website upon request. We also reserve the right to amen these terms and conditions and it's linking policy at any time. By continuously linking to our Website, you agree to be bound to and follow these linking terms and conditions.</p>
+                                    </div>
+                                    <div class="terms-wrapper" id="disclaimer">
+                                        <h4>Disclaimer</h4>
+                                        <p>The limitations and prohibitions of liability set in this Section and elsewhere in this disclaimer: (a) are subject to the preceding paragraph; and (b) govern all liabilities arising under the disclaimer, including liabilities arising in contract, in tort and for breach of statutory duty.</p>
+                                        <p>As long as the website and the information and services on the website are provided free of charge, we will not be liable for any loss or damage of any nature.</p>
+                                    </div>
+                                </div>
+                                <div class="terms-bottom-content">
+                                    <img src="../assets/images/others/1.svg" alt="" class="img-fluid">
+                                    <a href="#" class="btn btn-gradient color-2 btn-pill">Accept Terms</a>
+                                    <a href="" class="btn btn-gradient color-2 btn-pill">Proceed to Typology</a>
+                                </div>
+                                
+                            </div>
+                            <div class="wizard-step-2 d-none">
+                                <div class="title-3 text-start">
+                                    <h2>Select Typology</h2>
+                                </div>
+                                <div class="property-wrapper-grid">
+                                    <div class="property-2 row column-sm zoom-gallery property-label property-grid ">
+                                        <div class="col-xl-4 col-md-6 wow fadeInUp">
+                                            <div class="property-box">
+                                                <div class="property-image">
+                                                    <div class="property-slider">
+                                                        <a href="javascript:void(0)">
+                                                            <img src="../assets/images/property/11.jpg" class="bg-img" alt="">
+                                                        </a>
+                                                        <a href="javascript:void(0)">
+                                                            <img src="../assets/images/property/12.jpg" class="bg-img" alt="">
+
+                                                        </a>
+                                                        <a href="javascript:void(0)">
+                                                            <img src="../assets/images/property/13.jpg" class="bg-img" alt="">
+
+                                                        </a>
+                                                        <a href="javascript:void(0)">
+                                                            <img src="../assets/images/property/14.jpg" class="bg-img" alt="">
+
+                                                        </a>
+                                                    </div>
+                                                    <div class="labels-left">
+                                                        <div>
+                                                            <span class="label label-dark">for sale</span>
                                                         </div>
+                                                        <span class="label label-shadow">featured</span>
+                                                    </div>
+                                                    <div class="seen-data">
+                                                        <i data-feather="camera"></i>
+                                                        <span>25</span>
+                                                    </div>
+                                                    <div class="overlay-property-box">
+                                                        <a href="compare.html" class="effect-round" data-bs-toggle="tooltip" data-bs-placement="left" title="Compare">
+                                                            <i data-feather="shuffle"></i>
+                                                        </a>
+                                                        <a href="user-favourites.html" class="effect-round like" data-bs-toggle="tooltip" data-bs-placement="left" title="wishlist">
+                                                            <i data-feather="heart"></i>
+                                                        </a>
                                                     </div>
                                                 </div>
-                                                <div class="form-group col-sm-4">
-                                                    <label>Property Price</label>
-                                                    <input type="text" class="form-control" placeholder="$2800">
-                                                </div>
-                                                <div class="form-group col-sm-4">
-                                                    <label>Max Rooms</label>
-                                                    <div class="dropdown">
-                                                        <span class="dropdown-toggle font-rubik" data-bs-toggle="dropdown"><span>1</span> <i class="fas fa-angle-down"></i></span>
-                                                        <div class="dropdown-menu text-start">
-                                                            <a class="dropdown-item" href="javascript:void(0)">2</a>
-                                                            <a class="dropdown-item" href="javascript:void(0)">3</a>
-                                                            <a class="dropdown-item" href="javascript:void(0)">4</a>
-                                                            <a class="dropdown-item" href="javascript:void(0)">5</a>
-                                                            <a class="dropdown-item" href="javascript:void(0)">6</a>
-                                                        </div>
+                                                <div class="property-details">
+                                                    <span class="font-roboto">France</span>
+                                                    <a href="single-property-8.html">
+                                                        <h3>Merrick in Spring Way</h3>
+                                                    </a>
+                                                    <h6>$6558.00*</h6>
+                                                    <p class="font-roboto">The most common and most absolute type of estate, the tenant enjoys the greatest discretion over the disposal of the property.</p>
+                                                    <ul>
+                                                        <li><img src="../assets/images/svg/icon/double-bed.svg" class="img-fluid" alt="">Bed : 4</li>
+                                                        <li><img src="../assets/images/svg/icon/bathroom.svg" class="img-fluid" alt="">Baths : 4</li>
+                                                        <li><img src="../assets/images/svg/icon/square-ruler-tool.svg" class="img-fluid ruler-tool" alt="">Sq Ft : 5000</li>
+                                                    </ul>
+                                                    <div class="property-btn d-flex">
+                                                        <span>August 4, 2022</span>
+                                                        <button type="button"  onclick="document.location='single-property-8.html'" class="btn btn-dashed btn-pill color-2">Details</button>
                                                     </div>
                                                 </div>
-                                                <div class="form-group col-sm-4">
-                                                    <label>Beds</label>
-                                                    <div class="dropdown">
-                                                        <span class="dropdown-toggle font-rubik" data-bs-toggle="dropdown"><span>1</span> <i class="fas fa-angle-down"></i></span>
-                                                        <div class="dropdown-menu text-start">
-                                                            <a class="dropdown-item" href="javascript:void(0)">2</a>
-                                                            <a class="dropdown-item" href="javascript:void(0)">3</a>
-                                                            <a class="dropdown-item" href="javascript:void(0)">4</a>
-                                                            <a class="dropdown-item" href="javascript:void(0)">5</a>
-                                                            <a class="dropdown-item" href="javascript:void(0)">6</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group col-sm-4">
-                                                    <label>Baths</label>
-                                                    <div class="dropdown">
-                                                        <span class="dropdown-toggle font-rubik" data-bs-toggle="dropdown"><span>1</span> <i class="fas fa-angle-down"></i></span>
-                                                        <div class="dropdown-menu text-start">
-                                                            <a class="dropdown-item" href="javascript:void(0)">2</a>
-                                                            <a class="dropdown-item" href="javascript:void(0)">3</a>
-                                                            <a class="dropdown-item" href="javascript:void(0)">4</a>
-                                                            <a class="dropdown-item" href="javascript:void(0)">5</a>
-                                                            <a class="dropdown-item" href="javascript:void(0)">6</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group col-sm-4">
-                                                    <label>Area</label>
-                                                    <input type="text" class="form-control" placeholder="85 sq ft">
-                                                </div>
-                                                <div class="form-group col-sm-4">
-                                                    <label>Price</label>
-                                                    <input type="text" class="form-control" placeholder="$3000">
-                                                </div>
-                                                <div class="form-group col-sm-4">
-                                                    <label>Agencies</label>
-                                                    <div class="dropdown">
-                                                        <span class="dropdown-toggle font-rubik" data-bs-toggle="dropdown"><span>Premiere</span> <i class="fas fa-angle-down"></i></span>
-                                                        <div class="dropdown-menu text-start">
-                                                            <a class="dropdown-item" href="javascript:void(0)">Blue Sky</a>
-                                                            <a class="dropdown-item" href="javascript:void(0)">Zephyr</a>
-                                                            <a class="dropdown-item" href="javascript:void(0)">Premiere</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group col-sm-12">
-                                                    <label>Description</label>
-                                                    <textarea class="form-control" rows="4"></textarea>
-                                                </div>
-                                            </form>
+                                            </div>
                                         </div>
-                                        <div class="form-inputs">
-                                            <h6>Address</h6>
-                                            <form class="row gx-3">
-                                                <div class="form-group col-sm-6">
-                                                    <label>Address</label>
-                                                    <input type="text" class="form-control" placeholder="Address of your property">
-                                                </div>
-                                                <div class="form-group col-sm-6">
-                                                    <label>Zip code</label>
-                                                    <input type="number" class="form-control" placeholder="39702">
-                                                </div>
-                                                <div class="form-group col-sm-4">
-                                                    <label>Any Country</label>
-                                                    <div class="dropdown">
-                                                        <span class="dropdown-toggle font-rubik" data-bs-toggle="dropdown"><span>Austria</span> <i class="fas fa-angle-down"></i></span>
-                                                        <div class="dropdown-menu text-start">
-                                                            <a class="dropdown-item" href="javascript:void(0)">Austria</a>
-                                                            <a class="dropdown-item" href="javascript:void(0)">Brazil</a>
-                                                            <a class="dropdown-item" href="javascript:void(0)">New york</a>
-                                                            <a class="dropdown-item" href="javascript:void(0)">USA</a>
+                                        <div class="col-xl-4 col-md-6 wow fadeInUp">
+                                            <div class="property-box">
+                                                <div class="property-image">
+                                                    <div class="property-slider">
+                                                        <a href="javascript:void(0)">
+                                                            <img src="../assets/images/property/12.jpg" class="bg-img" alt="">
+
+                                                        </a>
+                                                        <a href="javascript:void(0)">
+                                                            <img src="../assets/images/property/13.jpg" class="bg-img" alt="">
+
+                                                        </a>
+                                                        <a href="javascript:void(0)">
+                                                            <img src="../assets/images/property/14.jpg" class="bg-img" alt="">
+
+                                                        </a>
+                                                        <a href="javascript:void(0)">
+                                                            <img src="../assets/images/property/11.jpg" class="bg-img" alt="">
+
+                                                        </a>
+                                                    </div>
+                                                    <div class="seen-data">
+                                                        <i data-feather="camera"></i>
+                                                        <span>09</span>
+                                                    </div>
+                                                    <div class="overlay-property-box">
+                                                        <a href="compare.html" class="effect-round" data-bs-toggle="tooltip" data-bs-placement="left" title="Compare">
+                                                            <i data-feather="shuffle"></i>
+                                                        </a>
+                                                        <a href="user-favourites.html" class="effect-round like" data-bs-toggle="tooltip" data-bs-placement="left" title="wishlist">
+                                                            <i data-feather="heart"></i>
+                                                        </a>
+                                                    </div>
+                                                    <div class="labels-left">
+                                                        <div>
+                                                            <span class="label label-dark">for rent</span>
                                                         </div>
+                                                        <span class="label label-success">featured</span>
                                                     </div>
                                                 </div>
-                                                <div class="form-group col-sm-4">
-                                                    <label>Any City</label>
-                                                    <div class="dropdown">
-                                                        <span class="dropdown-toggle font-rubik" data-bs-toggle="dropdown"><span>Amreli</span> <i class="fas fa-angle-down"></i></span>
-                                                        <div class="dropdown-menu text-start">
-                                                            <a class="dropdown-item" href="javascript:void(0)">Gandhinagar</a>
-                                                            <a class="dropdown-item" href="javascript:void(0)">Bharuch</a>
-                                                            <a class="dropdown-item" href="javascript:void(0)">Amreli</a>
-                                                            <a class="dropdown-item" href="javascript:void(0)">Ahmadabad</a>
-                                                        </div>
+                                                <div class="property-details">
+                                                    <span class="font-roboto">brazil</span>
+                                                    <a href="single-property-8.html">
+                                                        <h3>Home in Merrick Way</h3>
+                                                    </a>
+                                                    <h6>$6558.00*</h6>
+                                                    <p class="font-roboto">An interior designer is someone who plans,researches,coordinates,management and manages such enhancement projects.</p>
+                                                    <ul>
+                                                        <li><img src="../assets/images/svg/icon/double-bed.svg" class="img-fluid" alt="">Bed : 4</li>
+                                                        <li><img src="../assets/images/svg/icon/bathroom.svg" class="img-fluid" alt="">Baths : 4</li>
+                                                        <li><img src="../assets/images/svg/icon/square-ruler-tool.svg" class="img-fluid ruler-tool" alt="">Sq Ft : 5000</li>
+                                                    </ul>
+                                                    <div class="property-btn d-flex">
+                                                        <span>June 20, 2022</span>
+                                                        <button type="button"  onclick="document.location='single-property-8.html'" class="btn btn-dashed btn-pill color-2">Details</button>
                                                     </div>
                                                 </div>
-                                                <div class="form-group col-sm-4">
-                                                    <label>Landmark</label>
-                                                    <input type="text" class="form-control" placeholder="landmark place name">
-                                                </div>
-                                            </form>
+                                            </div>
                                         </div>
-                                        <div class="form-inputs">
-                                            <h6>Gallery</h6>
-                                            <form class="dropzone" id="multiFileUpload" action="/upload.php">
-                                                <div class="dz-message needsclick"><i class="fas fa-cloud-upload-alt"></i>
-                                                  <h6>Drop files here or click to upload.</h6><span class="note needsclick">(This is just a demo dropzone. Selected files are <strong>not</strong> actually uploaded.)</span>
-                                                </div>
-                                              </form>
-                                              <form class="row gx-3">
-                                                    <div class="form-group col-sm-12">
-                                                        <label>Video (mp4)</label>
-                                                        <input type="text" class="form-control" placeholder="mp4 video link">
+                                        <div class="col-xl-4 col-md-6 wow fadeInUp">
+                                            <div class="property-box">
+                                                <div class="property-image">
+                                                    <div class="property-slider">
+                                                        <a href="javascript:void(0)">
+                                                            <img src="../assets/images/property/14.jpg" class="bg-img" alt="">
+
+                                                        </a>
+                                                        <a href="javascript:void(0)">
+                                                            <img src="../assets/images/property/12.jpg" class="bg-img" alt="">
+
+                                                        </a>
+                                                        <a href="javascript:void(0)">
+                                                            <img src="../assets/images/property/11.jpg" class="bg-img" alt="">
+
+                                                        </a>
+                                                        <a href="javascript:void(0)">
+                                                            <img src="../assets/images/property/13.jpg" class="bg-img" alt="">
+
+                                                        </a>
                                                     </div>
-                                                    <div class="form-group col-sm-12">
-                                                        <label>Additional features</label>
-                                                        <div class="feature-checkbox">
-                                                            <label for="chk-ani">
-                                                                <input class="checkbox_animated color-2" id="chk-ani" type="checkbox"> Emergency Exit
-                                                            </label>
-                                                            <label for="chk-ani1">
-                                                                <input class="checkbox_animated color-2" id="chk-ani1" type="checkbox"> CCTV
-                                                            </label>
-                                                            <label for="chk-ani2">
-                                                                <input class="checkbox_animated color-2" id="chk-ani2" type="checkbox"> Free Wi-Fi
-                                                            </label>
-                                                            <label for="chk-ani3">
-                                                                <input class="checkbox_animated color-2" id="chk-ani3" type="checkbox">  Free Parking In The Area
-                                                            </label>
-                                                            <label for="chk-ani4">
-                                                                <input class="checkbox_animated color-2" id="chk-ani4" type="checkbox">  Air Conditioning
-                                                            </label>
+                                                    <div class="seen-data">
+                                                        <i data-feather="camera"></i>
+                                                        <span>42</span>
+                                                    </div>
+                                                    <div class="overlay-property-box">
+                                                        <a href="compare.html" class="effect-round" data-bs-toggle="tooltip" data-bs-placement="left" title="Compare">
+                                                            <i data-feather="shuffle"></i>
+                                                        </a>
+                                                        <a href="user-favourites.html" class="effect-round like" data-bs-toggle="tooltip" data-bs-placement="left" title="wishlist">
+                                                            <i data-feather="heart"></i>
+                                                        </a>
+                                                    </div>
+                                                    <div class="labels-left">
+                                                        <div>
+                                                            <span class="label label-dark">for sale</span>
                                                         </div>
                                                     </div>
-                                              </form>
+                                                </div>
+                                                <div class="property-details">
+                                                    <span class="font-roboto">usa</span>
+                                                    <a href="single-property-8.html">
+                                                        <h3>Hidden Spring Hideway</h3>
+                                                    </a>
+                                                    <h6>$9554.00*</h6>
+                                                    <p class="font-roboto">Elegant retreat in a quiet Coral Gables setting. This home provides wonderful entertaining spaces with a chef
+                                                        kitchen opening…</p>
+                                                    <ul>
+                                                        <li><img src="../assets/images/svg/icon/double-bed.svg" class="img-fluid" alt="">Bed : 4</li>
+                                                        <li><img src="../assets/images/svg/icon/bathroom.svg" class="img-fluid" alt="">Baths : 4</li>
+                                                        <li><img src="../assets/images/svg/icon/square-ruler-tool.svg" class="img-fluid ruler-tool" alt="">Sq Ft : 5000</li>
+                                                    </ul>
+                                                    <div class="property-btn d-flex">
+                                                        <span>July 18, 2022</span>
+                                                        <button type="button"  onclick="document.location='single-property-8.html'" class="btn btn-dashed btn-pill color-2">Details</button>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="text-end">
-                                            <button type="submit" class="btn btn-gradient color-2 btn-pill">Add property</button>
+                                        <div class="col-xl-4 col-md-6 wow fadeInUp">
+                                            <div class="property-box">
+                                                <div class="property-image">
+                                                    <div class="property-slider">
+                                                        <a href="javascript:void(0)">
+                                                            <img src="../assets/images/property/13.jpg" class="bg-img" alt="">
+
+                                                        </a>
+                                                        <a href="javascript:void(0)">
+                                                            <img src="../assets/images/property/15.jpg" class="bg-img" alt="">
+
+                                                        </a>
+                                                        <a href="javascript:void(0)">
+                                                            <img src="../assets/images/property/16.jpg" class="bg-img" alt="">
+
+                                                        </a>
+                                                        <a href="javascript:void(0)">
+                                                            <img src="../assets/images/property/17.jpg" class="bg-img" alt="">
+
+                                                        </a>
+                                                    </div>
+                                                    <div class="labels-left">
+                                                        <div>
+                                                            <span class="label label-shadow">for rent</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="seen-data">
+                                                        <i data-feather="camera"></i>
+                                                        <span>10</span>
+                                                    </div>
+                                                    <div class="overlay-property-box">
+                                                        <a href="compare.html" class="effect-round" data-bs-toggle="tooltip" data-bs-placement="left" title="Compare">
+                                                            <i data-feather="shuffle"></i>
+                                                        </a>
+                                                        <a href="user-favourites.html" class="effect-round like" data-bs-toggle="tooltip" data-bs-placement="left" title="wishlist">
+                                                            <i data-feather="heart"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="property-details">
+                                                    <span class="font-roboto">usa</span>
+                                                    <a href="single-property-8.html">
+                                                        <h3>Little Acorn Farm</h3>
+                                                    </a>
+                                                    <h6>$4513.00*</h6>
+                                                    <p class="font-roboto">Real estate market in most countries are not as organize or efficient as markets for other, more liquid investment instruments.</p>
+                                                    <ul>
+                                                        <li><img src="../assets/images/svg/icon/double-bed.svg" class="img-fluid" alt="">Bed : 4</li>
+                                                        <li><img src="../assets/images/svg/icon/bathroom.svg" class="img-fluid" alt="">Baths : 4</li>
+                                                        <li><img src="../assets/images/svg/icon/square-ruler-tool.svg" class="img-fluid ruler-tool" alt="">Sq Ft : 5000</li>
+                                                    </ul>
+                                                    <div class="property-btn d-flex">
+                                                        <span>January 6, 2022</span>
+                                                        <button type="button"  onclick="document.location='single-property-8.html'" class="btn btn-dashed btn-pill color-2">Details</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4 col-md-6 wow fadeInUp">
+                                            <div class="property-box">
+                                                <div class="property-image">
+                                                    <div class="property-slider">
+                                                        <a href="javascript:void(0)">
+                                                            <img src="../assets/images/property/15.jpg" class="bg-img" alt="">
+
+                                                        </a>
+                                                        <a href="javascript:void(0)">
+                                                            <img src="../assets/images/property/16.jpg" class="bg-img" alt="">
+
+                                                        </a>
+                                                        <a href="javascript:void(0)">
+                                                            <img src="../assets/images/property/17.jpg" class="bg-img" alt="">
+
+                                                        </a>
+                                                        <a href="javascript:void(0)">
+                                                            <img src="../assets/images/property/18.jpg" class="bg-img" alt="">
+
+                                                        </a>
+                                                    </div>
+                                                    <div class="labels-left">
+                                                        <div>
+                                                            <span class="label label-dark">for sale</span>
+                                                        </div>
+                                                        <span class="label label-shadow">featured</span>
+                                                    </div>
+                                                    <div class="seen-data">
+                                                        <i data-feather="camera"></i>
+                                                        <span>25</span>
+                                                    </div>
+                                                    <div class="overlay-property-box">
+                                                        <a href="compare.html" class="effect-round" data-bs-toggle="tooltip" data-bs-placement="left" title="Compare">
+                                                            <i data-feather="shuffle"></i>
+                                                        </a>
+                                                        <a href="user-favourites.html" class="effect-round like" data-bs-toggle="tooltip" data-bs-placement="left" title="wishlist">
+                                                            <i data-feather="heart"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="property-details">
+                                                    <span class="font-roboto">France</span>
+                                                    <a href="single-property-8.html">
+                                                        <h3>Merrick in Spring Way</h3>
+                                                    </a>
+                                                    <h6>$4513.00*</h6>
+                                                    <p class="font-roboto">How they are connected to neighbouring residences and land. Residences can be classified in flat or apartment and land.</p>
+                                                    <ul>
+                                                        <li><img src="../assets/images/svg/icon/double-bed.svg" class="img-fluid" alt="">Bed : 4</li>
+                                                        <li><img src="../assets/images/svg/icon/bathroom.svg" class="img-fluid" alt="">Baths : 4</li>
+                                                        <li><img src="../assets/images/svg/icon/square-ruler-tool.svg" class="img-fluid ruler-tool" alt="">Sq Ft : 5000</li>
+                                                    </ul>
+                                                    <div class="property-btn d-flex">
+                                                        <span>January 6, 2022</span>
+                                                        <button type="button"  onclick="document.location='single-property-8.html'" class="btn btn-dashed btn-pill color-2">Details</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4 col-md-6 wow fadeInUp">
+                                            <div class="property-box">
+                                                <div class="property-image">
+                                                    <div class="property-slider">
+                                                        <a href="javascript:void(0)">
+                                                            <img src="../assets/images/property/16.jpg" class="bg-img" alt="">
+
+                                                        </a>
+                                                        <a href="javascript:void(0)">
+                                                            <img src="../assets/images/property/15.jpg" class="bg-img" alt="">
+
+                                                        </a>
+                                                        <a href="javascript:void(0)">
+                                                            <img src="../assets/images/property/18.jpg" class="bg-img" alt="">
+
+                                                        </a>
+                                                        <a href="javascript:void(0)">
+                                                            <img src="../assets/images/property/17.jpg" class="bg-img" alt="">
+
+                                                        </a>
+                                                    </div>
+                                                    <div class="labels-left">
+                                                        <div>
+                                                            <span class="label label-dark">for rent</span>
+                                                        </div>
+                                                        <span class="label label-success">featured</span>
+                                                    </div>
+                                                    <div class="seen-data">
+                                                        <i data-feather="camera"></i>
+                                                        <span>42</span>
+                                                    </div>
+                                                    <div class="overlay-property-box">
+                                                        <a href="compare.html" class="effect-round" data-bs-toggle="tooltip" data-bs-placement="left" title="Compare">
+                                                            <i data-feather="shuffle"></i>
+                                                        </a>
+                                                        <a href="user-favourites.html" class="effect-round like" data-bs-toggle="tooltip" data-bs-placement="left" title="wishlist">
+                                                            <i data-feather="heart"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="property-details">
+                                                    <span class="font-roboto">brazil</span>
+                                                    <a href="single-property-8.html">
+                                                        <h3>Hidden Spring Hideway</h3>
+                                                    </a>
+                                                    <h6>$9554.00*</h6>
+                                                    <p class="font-roboto">This home provides wonderful entertaining spaces with a chef
+                                                        kitchen opening. Elegant retreat in a quiet Coral Gables setting.</p>
+                                                    <ul>
+                                                        <li><img src="../assets/images/svg/icon/double-bed.svg" class="img-fluid" alt="">Bed : 4</li>
+                                                        <li><img src="../assets/images/svg/icon/bathroom.svg" class="img-fluid" alt="">Baths : 4</li>
+                                                        <li><img src="../assets/images/svg/icon/square-ruler-tool.svg" class="img-fluid ruler-tool" alt="">Sq Ft : 5000</li>
+                                                    </ul>
+                                                    <div class="property-btn d-flex">
+                                                        <span>May 14, 2022</span>
+                                                        <button type="button"  onclick="document.location='single-property-8.html'" class="btn btn-dashed btn-pill color-2">Details</button>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
+                                </div>
+                                
+                            </div>
+                            <div class="wizard-step-3 d-none">
+                                <div class="title-3 text-start">
+                                    <h2>complete details</h2>
+                                </div>
+                                <div class="input-data">
+                                    <div class="account-content">
+                                        <h3>Account information</h3>
+                                        <ul>
+                                            <li>Name : <span class="first_name">test</span></li>
+                                            <li>phone number : <span class="phone_number">64847654</span></li>
+                                            <li>Email : <span class="email_add">test@gmail.com</span></li>
+                                        </ul>
+                                    </div>
+                                    <div class="account-content">
+                                        <h3>Location Details</h3>
+                                        <ul>
+                                            <li>Address : <span class="address-type">test</span></li>
+                                            <li>city : <span class="city-name">test</span></li>
+                                            <li>state : <span class="state-name">test</span></li>
+                                            <li>country : <span class="country-name">test</span></li>
+                                            <li>pincode : <span class="pin-code">test</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="next-btn d-flex">
+                                    <button type="button" class="btn btn-dashed color-2 prev2 btn-pill"><i class="fas fa-arrow-left me-2"></i> Previous</button>
+                                    <button type="button" class="btn btn-gradient color-2 next3 btn-pill">submit</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
     </section>
-    <!-- user dashboard section end -->
+    <!-- sign up section end -->
 
     <!-- footer start -->
     <footer>
@@ -1020,29 +1285,6 @@
     </div>
     <!-- tap to top end -->
 
-    <!-- log out modal start -->
-    <div class="modal fade edit-profile-modal logout-modal" id="logout">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Logging out</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <h6>Are you sure ? you want to log out.</h6>
-                    <p>Once you will be logged out and will be unable to log in back.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-dashed color-2 btn-pill" data-bs-dismiss="modal">no</button>
-                    <button type="button" onclick="document.location='layout-2.html'" class="btn btn-gradient color-2 btn-pill">yes</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- log out modal end -->
-
     <!-- customizer start -->
     <div class="customizer-wrap">
         <div class="customizer-links">
@@ -1101,6 +1343,9 @@
     <!-- popper js-->
     <script src="../assets/js/popper.min.js"></script>
 
+    <!-- Bootstrap js-->
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+
     <!-- feather icon js-->
     <script src="../assets/js/feather-icon/feather.min.js"></script>
     <script src="../assets/js/feather-icon/feather-icon.js"></script>
@@ -1110,12 +1355,17 @@
     <script src="../assets/js/slick-animation.min.js"></script>
     <script src="../assets/js/custom-slick.js"></script>
 
-    <!-- Bootstrap js-->
-    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <!-- sweetalert js -->
+    <script src="../assets/js/sweetalert.min.js"></script>
 
-    <!-- Dropzone js -->
-    <script src="../assets/js/dropzone/dropzone.js"></script>
-    <script src="../assets/js/dropzone/dropzone-script.js"></script>
+    <!-- notify js -->
+    <script src="../assets/js/bootstrap-notify.min.js"></script>
+
+    <!-- wizard js -->
+    <script src="../assets/js/signup-wizard.js"></script>
+
+    <!-- login js -->
+    <script src="../assets/js/login.js"></script>
 
     <!-- Template js-->
     <script src="../assets/js/script.js"></script>
@@ -1123,11 +1373,8 @@
     <!-- Customizer js-->
     <script src="../assets/js/customizer.js"></script>
 
-    <!-- wow js-->
-    <script src="../assets/js/wow.min.js"></script>
-
     <!-- Color-picker js-->
-    <script src="../assets/js/color/template-color.js"></script>
+    <script src="../assets/js/color/single-property.js"></script>
 
 </body>
 

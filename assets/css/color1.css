@@ -2262,15 +2262,15 @@ label {
   transition: transform 0.7s;
   transition: transform 0.7s, -webkit-transform 0.7s; }
   .example-slider .fnc-slide-1 .fnc-slide__inner {
-    background-image: url("../images/layout/1.jpg"); }
+    background-image: url("../images/layout/nachu-riverline-1.png"); }
   .example-slider .fnc-slide-1 .fnc-slide__mask-inner {
-    background-image: url("../images/layout/1.jpg"); }
+    background-image: url("../images/layout/nachu-riverline-1.png"); }
   .example-slider .fnc-slide-2 .fnc-slide__inner {
-    background-image: url("../images/layout/2.jpg"); }
+    background-image: url("../images/layout/nachu-riverline-2.png"); }
   .example-slider .fnc-slide-2 .fnc-slide__mask-inner {
-    background-image: url("../images/layout/2.jpg"); }
+    background-image: url("../images/layout/nachu-riverline-2.png"); }
   .example-slider .fnc-slide-3 .fnc-slide__inner {
-    background-image: url("../images/property/1.jpg"); }
+    background-image: url("../images/layout/nachu-riverline-phase-3.png"); }
     .example-slider .fnc-slide-3 .fnc-slide__inner:before {
       content: "";
       position: absolute;
@@ -2280,7 +2280,7 @@ label {
       height: 100%;
       background: rgba(255, 255, 255, 0.1); }
   .example-slider .fnc-slide-3 .fnc-slide__mask-inner {
-    background-image: url("../images/property/1.jpg"); }
+    background-image: url("../images/layout/nachu-riverline-phase-3.png"); }
   .example-slider .fnc-slide-4 .fnc-slide__inner:before {
     content: "";
     position: absolute;

@@ -5,11 +5,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sheltos - User listing page">
+    <meta name="description" content="Sheltos - User Payment page">
     <meta name="keywords" content="sheltos">
     <meta name="author" content="sheltos">
     <link rel="icon" href="../assets/images/favicon.png" type="image/x-icon" />
-    <title>Sheltos - User listing page</title>
+    <title>Sheltos - User Payment page</title>
 
    <!--Google font-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,600i,700,700i,800,800i"
@@ -569,7 +569,7 @@
                     <nav aria-label="breadcrumb" class="theme-breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Create property</li>
+                            <li class="breadcrumb-item active" aria-current="page">Cards & payment</li>
                         </ol>
                     </nav>
                 </div>
@@ -615,12 +615,12 @@
                                             href="user-dashboard.html">Dashboard</a></li>
                                     <li class="nav-item"><a class="nav-link"
                                             href="user-listing.html">My Listing</a></li>
-                                    <li class="nav-item"><a class="nav-link active"
+                                    <li class="nav-item"><a class="nav-link"
                                             href="user-create.html">create property</a></li>
                                     <li class="nav-item"><a class="nav-link" href="user-profile.html">My profile</a>
                                     </li>
                                     <li class="nav-item"><a class="nav-link" href="user-favourites.html">favourites</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="user-payment.html">Cards & payment</a></li>
+                                    <li class="nav-item"><a class="nav-link active" href="user-payment.html">Cards & payment</a></li>
                                     <li class="nav-item"><a class="nav-link" href="user-privacy.html">Privacy</a></li>
                                     <li class="nav-item"><a href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#logout" class="nav-link">Log out</a></li>
                                 </ul>
@@ -629,174 +629,132 @@
                     </div>
                     <div class="col-lg-9">
                         <div class="dashboard-content">
-                            <div class="create-tab" id="create-property">
-                                <div class="property-wizard common-card">
+                            <div class="payment-user" id="payment">
+                                <div class="common-card">
                                     <div class="common-header">
-                                        <h5>Create property</h5>
+                                        <h5>Cards & payment</h5>
                                     </div>
-                                    <div class="create-property-form">
-                                        <div class="form-inputs">
-                                            <h6>Basic information</h6>
-                                            <form class="row gx-2 gx-sm-3">
-                                                <div class="form-group col-sm-4">
-                                                    <label>Property Type</label>
-                                                    <input type="text" class="form-control" placeholder="villa">
-                                                </div>
-                                                <div class="form-group col-sm-4">
-                                                    <label>Property Status</label>
-                                                    <div class="dropdown">
-                                                        <span class="dropdown-toggle font-rubik" data-bs-toggle="dropdown"><span>For sale</span> <i class="fas fa-angle-down"></i></span>
-                                                        <div class="dropdown-menu text-start">
-                                                            <a class="dropdown-item" href="javascript:void(0)">For Rent</a>
-                                                            <a class="dropdown-item" href="javascript:void(0)">For Sale</a>
+                                    <div class="row card-payment">
+                                        <div class="col-xl-4 col-sm-6">
+                                            <div class="payment-card master">
+                                                <div class="card-details">
+                                                    <div class="text-end">
+                                                        <h6>Credit</h6>
+                                                    </div>
+                                                    <div class="card-number">
+                                                        <div>
+                                                            <img src="../assets/images/icon/chip.png" class="img-fluid" alt="">
+                                                            <img src="../assets/images/icon/wifi.png" class="img-fluid" alt="">
+                                                        </div>
+                                                        <h3>XXXX-XXXX-XXXX-3401</h3>
+                                                    </div>
+                                                    <div class="valid-detail">
+                                                        <div class="title">
+                                                            <span>valid</span>
+                                                            <span>thru</span>
+                                                        </div>
+                                                        <div class="date">
+                                                            <h3>12/24</h3>
+                                                        </div>
+                                                    </div>
+                                                    <div class="name-detail">
+                                                        <div class="name">
+                                                            <h5>Zack Lee</h5>
+                                                        </div>
+                                                        <div class="card-img">
+                                                            <img src="../assets/images/icon/master.png" class="img-fluid" alt="">
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="form-group col-sm-4">
-                                                    <label>Property Price</label>
-                                                    <input type="text" class="form-control" placeholder="$2800">
+                                                <div class="edit-card">
+                                                    <a data-bs-toggle="modal" data-bs-target="#edit-card" href="javascript:void(0)">edit</a>
+                                                    <a href="javascript:void(0)">delete</a>
                                                 </div>
-                                                <div class="form-group col-sm-4">
-                                                    <label>Max Rooms</label>
-                                                    <div class="dropdown">
-                                                        <span class="dropdown-toggle font-rubik" data-bs-toggle="dropdown"><span>1</span> <i class="fas fa-angle-down"></i></span>
-                                                        <div class="dropdown-menu text-start">
-                                                            <a class="dropdown-item" href="javascript:void(0)">2</a>
-                                                            <a class="dropdown-item" href="javascript:void(0)">3</a>
-                                                            <a class="dropdown-item" href="javascript:void(0)">4</a>
-                                                            <a class="dropdown-item" href="javascript:void(0)">5</a>
-                                                            <a class="dropdown-item" href="javascript:void(0)">6</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group col-sm-4">
-                                                    <label>Beds</label>
-                                                    <div class="dropdown">
-                                                        <span class="dropdown-toggle font-rubik" data-bs-toggle="dropdown"><span>1</span> <i class="fas fa-angle-down"></i></span>
-                                                        <div class="dropdown-menu text-start">
-                                                            <a class="dropdown-item" href="javascript:void(0)">2</a>
-                                                            <a class="dropdown-item" href="javascript:void(0)">3</a>
-                                                            <a class="dropdown-item" href="javascript:void(0)">4</a>
-                                                            <a class="dropdown-item" href="javascript:void(0)">5</a>
-                                                            <a class="dropdown-item" href="javascript:void(0)">6</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group col-sm-4">
-                                                    <label>Baths</label>
-                                                    <div class="dropdown">
-                                                        <span class="dropdown-toggle font-rubik" data-bs-toggle="dropdown"><span>1</span> <i class="fas fa-angle-down"></i></span>
-                                                        <div class="dropdown-menu text-start">
-                                                            <a class="dropdown-item" href="javascript:void(0)">2</a>
-                                                            <a class="dropdown-item" href="javascript:void(0)">3</a>
-                                                            <a class="dropdown-item" href="javascript:void(0)">4</a>
-                                                            <a class="dropdown-item" href="javascript:void(0)">5</a>
-                                                            <a class="dropdown-item" href="javascript:void(0)">6</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group col-sm-4">
-                                                    <label>Area</label>
-                                                    <input type="text" class="form-control" placeholder="85 sq ft">
-                                                </div>
-                                                <div class="form-group col-sm-4">
-                                                    <label>Price</label>
-                                                    <input type="text" class="form-control" placeholder="$3000">
-                                                </div>
-                                                <div class="form-group col-sm-4">
-                                                    <label>Agencies</label>
-                                                    <div class="dropdown">
-                                                        <span class="dropdown-toggle font-rubik" data-bs-toggle="dropdown"><span>Premiere</span> <i class="fas fa-angle-down"></i></span>
-                                                        <div class="dropdown-menu text-start">
-                                                            <a class="dropdown-item" href="javascript:void(0)">Blue Sky</a>
-                                                            <a class="dropdown-item" href="javascript:void(0)">Zephyr</a>
-                                                            <a class="dropdown-item" href="javascript:void(0)">Premiere</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group col-sm-12">
-                                                    <label>Description</label>
-                                                    <textarea class="form-control" rows="4"></textarea>
-                                                </div>
-                                            </form>
+                                            </div>
                                         </div>
-                                        <div class="form-inputs">
-                                            <h6>Address</h6>
-                                            <form class="row gx-3">
-                                                <div class="form-group col-sm-6">
-                                                    <label>Address</label>
-                                                    <input type="text" class="form-control" placeholder="Address of your property">
-                                                </div>
-                                                <div class="form-group col-sm-6">
-                                                    <label>Zip code</label>
-                                                    <input type="number" class="form-control" placeholder="39702">
-                                                </div>
-                                                <div class="form-group col-sm-4">
-                                                    <label>Any Country</label>
-                                                    <div class="dropdown">
-                                                        <span class="dropdown-toggle font-rubik" data-bs-toggle="dropdown"><span>Austria</span> <i class="fas fa-angle-down"></i></span>
-                                                        <div class="dropdown-menu text-start">
-                                                            <a class="dropdown-item" href="javascript:void(0)">Austria</a>
-                                                            <a class="dropdown-item" href="javascript:void(0)">Brazil</a>
-                                                            <a class="dropdown-item" href="javascript:void(0)">New york</a>
-                                                            <a class="dropdown-item" href="javascript:void(0)">USA</a>
+                                        <div class="col-xl-4 col-sm-6">
+                                            <div class="payment-card visa">
+                                                <div class="card-details">
+                                                    <div class="text-end">
+                                                        <h6>Credit</h6>
+                                                    </div>
+                                                    <div class="card-number">
+                                                        <div>
+                                                            <img src="../assets/images/icon/chip.png" class="img-fluid" alt="">
+                                                            <img src="../assets/images/icon/wifi.png" class="img-fluid" alt="">
+                                                        </div>
+                                                        <h3>XXXX-XXXX-XXXX-3401</h3>
+                                                    </div>
+                                                    <div class="valid-detail">
+                                                        <div class="title">
+                                                            <span>valid</span>
+                                                            <span>thru</span>
+                                                        </div>
+                                                        <div class="date">
+                                                            <h3>12/24</h3>
+                                                        </div>
+                                                    </div>
+                                                    <div class="name-detail">
+                                                        <div class="name">
+                                                            <h5>Zack Lee</h5>
+                                                        </div>
+                                                        <div class="card-img">
+                                                            <img src="../assets/images/icon/visa.png" class="img-fluid" alt="">
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="form-group col-sm-4">
-                                                    <label>Any City</label>
-                                                    <div class="dropdown">
-                                                        <span class="dropdown-toggle font-rubik" data-bs-toggle="dropdown"><span>Amreli</span> <i class="fas fa-angle-down"></i></span>
-                                                        <div class="dropdown-menu text-start">
-                                                            <a class="dropdown-item" href="javascript:void(0)">Gandhinagar</a>
-                                                            <a class="dropdown-item" href="javascript:void(0)">Bharuch</a>
-                                                            <a class="dropdown-item" href="javascript:void(0)">Amreli</a>
-                                                            <a class="dropdown-item" href="javascript:void(0)">Ahmadabad</a>
-                                                        </div>
-                                                    </div>
+                                                <div class="edit-card">
+                                                    <a data-bs-toggle="modal" data-bs-target="#edit-card" href="javascript:void(0)">edit</a>
+                                                    <a href="javascript:void(0)">delete</a>
                                                 </div>
-                                                <div class="form-group col-sm-4">
-                                                    <label>Landmark</label>
-                                                    <input type="text" class="form-control" placeholder="landmark place name">
-                                                </div>
-                                            </form>
+                                            </div>
                                         </div>
-                                        <div class="form-inputs">
-                                            <h6>Gallery</h6>
-                                            <form class="dropzone" id="multiFileUpload" action="/upload.php">
-                                                <div class="dz-message needsclick"><i class="fas fa-cloud-upload-alt"></i>
-                                                  <h6>Drop files here or click to upload.</h6><span class="note needsclick">(This is just a demo dropzone. Selected files are <strong>not</strong> actually uploaded.)</span>
-                                                </div>
-                                              </form>
-                                              <form class="row gx-3">
-                                                    <div class="form-group col-sm-12">
-                                                        <label>Video (mp4)</label>
-                                                        <input type="text" class="form-control" placeholder="mp4 video link">
+                                        <div class="col-xl-4 col-sm-6">
+                                            <div class="payment-card american-express">
+                                                <div class="card-details">
+                                                    <div class="text-end">
+                                                        <h6>Credit</h6>
                                                     </div>
-                                                    <div class="form-group col-sm-12">
-                                                        <label>Additional features</label>
-                                                        <div class="feature-checkbox">
-                                                            <label for="chk-ani">
-                                                                <input class="checkbox_animated color-2" id="chk-ani" type="checkbox"> Emergency Exit
-                                                            </label>
-                                                            <label for="chk-ani1">
-                                                                <input class="checkbox_animated color-2" id="chk-ani1" type="checkbox"> CCTV
-                                                            </label>
-                                                            <label for="chk-ani2">
-                                                                <input class="checkbox_animated color-2" id="chk-ani2" type="checkbox"> Free Wi-Fi
-                                                            </label>
-                                                            <label for="chk-ani3">
-                                                                <input class="checkbox_animated color-2" id="chk-ani3" type="checkbox">  Free Parking In The Area
-                                                            </label>
-                                                            <label for="chk-ani4">
-                                                                <input class="checkbox_animated color-2" id="chk-ani4" type="checkbox">  Air Conditioning
-                                                            </label>
+                                                    <div class="card-number">
+                                                        <div>
+                                                            <img src="../assets/images/icon/chip.png" class="img-fluid" alt="">
+                                                            <img src="../assets/images/icon/wifi.png" class="img-fluid" alt="">
+                                                        </div>
+                                                        <h3>XXXX-XXXX-XXXX-3401</h3>
+                                                    </div>
+                                                    <div class="valid-detail">
+                                                        <div class="title">
+                                                            <span>valid</span>
+                                                            <span>thru</span>
+                                                        </div>
+                                                        <div class="date">
+                                                            <h3>12/24</h3>
                                                         </div>
                                                     </div>
-                                              </form>
+                                                    <div class="name-detail">
+                                                        <div class="name">
+                                                            <h5>Zack Lee</h5>
+                                                        </div>
+                                                        <div class="card-img">
+                                                            <img src="../assets/images/icon/american.jpg" class="img-fluid" alt="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="edit-card">
+                                                    <a data-bs-toggle="modal" data-bs-target="#edit-card" href="javascript:void(0)">edit</a>
+                                                    <a href="javascript:void(0)">delete</a>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="text-end">
-                                            <button type="submit" class="btn btn-gradient color-2 btn-pill">Add property</button>
+                                        <div class="col-xl-4 col-sm-6">
+                                            <div class="payment-card add-card">
+                                                <div data-bs-toggle="modal" data-bs-target="#add-card" class="card-details">
+                                                    <div>
+                                                        <i class="fas fa-plus-circle"></i>
+                                                        <h5>add new card</h5>
+                                                    </div>
+                                                </div> 
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -1020,6 +978,231 @@
     </div>
     <!-- tap to top end -->
 
+    <!-- edit profile modal start -->
+    <div class="modal fade edit-profile-modal" id="edit-profile">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Edit Profile</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row gx-3">
+                            <div class="form-group col-md-6">
+                                <label for="first">first name</label>
+                                <input type="text" class="form-control" id="first" placeholder="first name">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="last">last name</label>
+                                <input type="text" class="form-control" id="last" placeholder="last name">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="gender">gender</label>
+                                <select id="gender" class="form-control">
+                                    <option selected>Choose...</option>
+                                    <option>female</option>
+                                    <option>male</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label>Birthday</label>
+                                <input class="form-control" placeholder="18 april" id="datepicker" />
+                            </div>
+                            <div class="form-group col-12">
+                                <label for="inputAddress">Address</label>
+                                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputCity">City</label>
+                                <input type="text" class="form-control" id="inputCity">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputState">State</label>
+                                <select id="inputState" class="form-control">
+                                    <option selected>Choose...</option>
+                                    <option>...</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dashed color-2 btn-pill" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-gradient color-2 btn-pill" data-bs-dismiss="modal">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- edit profile modal start -->
+
+    <!-- edit address modal start -->
+    <div class="modal fade edit-profile-modal" id="edit-address">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Change email address</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row gx-3">
+                            <div class="form-group col-12">
+                                <label for="old">current email</label>
+                                <input type="email" class="form-control" id="old">
+                            </div>
+                            <div class="form-group col-12">
+                                <label for="new">enter new email</label>
+                                <input type="email" class="form-control" id="new">
+                            </div>
+                            <div class="form-group col-12">
+                                <label for="comfirm">confirm your email</label>
+                                <input type="email" class="form-control" id="comfirm">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dashed color-2 btn-pill" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-gradient color-2 btn-pill" data-bs-dismiss="modal">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- edit address modal start -->
+
+    <!-- edit password modal start -->
+    <div class="modal fade edit-profile-modal" id="edit-password">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Change password</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row gx-3">
+                            <div class="form-group col-12">
+                                <label for="p-o">current password</label>
+                                <input type="password" class="form-control" id="p-o">
+                            </div>
+                            <div class="form-group col-12">
+                                <label for="p-n">enter new password</label>
+                                <input type="password" class="form-control" id="p-n">
+                            </div>
+                            <div class="form-group col-12">
+                                <label for="p-c">confirm your password</label>
+                                <input type="password" class="form-control" id="p-c">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dashed color-2 btn-pill" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-gradient color-2 btn-pill" data-bs-dismiss="modal">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- edit password modal start -->
+
+    <!-- edit card modal start -->
+    <div class="modal fade edit-profile-modal" id="edit-card">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">edit your card</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">name on card</label>
+                            <input type="text" class="form-control" id="name" placeholder="Zack Lee">
+                        </div>
+                        <div class="form-group">
+                            <label for="number">card number</label>
+                            <input type="text" class="form-control" id="number" placeholder="5870 3174 8714 3401">
+                        </div>
+                        <div class="row gx-3">
+                            <div class="form-group col-md-8">
+                                <label for="expiry">expiry date</label>
+                                <input type="text" class="form-control" id="expiry" placeholder="12/24">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="cvv">cvv</label>
+                                <input type="password"  maxlength="3"  class="form-control" id="cvv" placeholder="&#9679;&#9679;&#9679;">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dashed color-2 btn-pill" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-gradient color-2 btn-pill" data-bs-dismiss="modal">update card</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- edit card modal start -->
+
+    <!-- add new card modal start -->
+    <div class="modal fade edit-profile-modal" id="add-card">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">add new card</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="a-month">card type</label>
+                            <select id="a-month" class="form-control">
+                                <option selected>add new card...</option>
+                                <option>credit card</option>
+                                <option>debit card</option>
+                                <option>debit card with ATM pin</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="a-na">name on card</label>
+                            <input type="text" class="form-control" id="a-na">
+                        </div>
+                        <div class="form-group">
+                            <label for="a-n">card number</label>
+                            <input type="text" class="form-control" id="a-n">
+                        </div>
+                        <div class="row gx-3">
+                            <div class="form-group col-md-8">
+                                <label for="a-e">expiry date</label>
+                                <input type="text" class="form-control" id="a-e">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="a-c">cvv</label>
+                                <input type="password"  maxlength="3"  class="form-control" id="a-c">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dashed color-2 btn-pill" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-gradient color-2 btn-pill" data-bs-dismiss="modal">add card</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- add new card modal start -->
+
     <!-- log out modal start -->
     <div class="modal fade edit-profile-modal logout-modal" id="logout">
         <div class="modal-dialog modal-dialog-centered">
@@ -1112,10 +1295,6 @@
 
     <!-- Bootstrap js-->
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Dropzone js -->
-    <script src="../assets/js/dropzone/dropzone.js"></script>
-    <script src="../assets/js/dropzone/dropzone-script.js"></script>
 
     <!-- Template js-->
     <script src="../assets/js/script.js"></script>
