@@ -5,11 +5,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sheltos - Admin dashboard page">
+    <meta name="description" content="Sheltos - Payments page">
     <meta name="keywords" content="sheltos">
     <meta name="author" content="sheltos">
     <link rel="icon" href="../assets/images/favicon.png" type="image/x-icon" />
-    <title>Sheltos - Admin dashboard page</title>
+    <title>Sheltos - Payments page</title>
 
    <!--Google font-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,600i,700,700i,800,800i"
@@ -17,6 +17,9 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Rubik:400,400i,500,500i,700,700i" rel="stylesheet">
+
+     <!-- datatable css -->
+    <link href="../assets/css/jsgrid.css" rel="stylesheet"/>
 
     <!-- animate css -->
     <link rel="stylesheet" type="text/css" href="../assets/css/animate.css">
@@ -45,6 +48,7 @@
             <div id="sidebar-toggle" class="toggle-sidebar col-auto">
                 <i data-feather="chevrons-left"></i>
             </div>
+            
             <div class="nav-right col p-0">
                 <ul class="header-menu">
                     <li>
@@ -484,7 +488,7 @@
                                 </a>
                             </li>
                             <li class="sidebar-item">
-                                <a href="table.html" class="sidebar-link only-link">
+                                <a href="payments.html" class="sidebar-link only-link">
                                     <i data-feather="credit-card"></i>
                                     <span>Payments</span>
                                 </a>
@@ -539,7 +543,7 @@
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="page-header-left">
-                                    <h3>Dashboard
+                                    <h3>Payments
                                         <small>Welcome to admin panel</small>
                                     </h3>
                                 </div>
@@ -553,7 +557,7 @@
                                             <i class="fa fa-home"></i>
                                         </a>
                                     </li>
-                                    <li class="breadcrumb-item active">Dashboard</li>
+                                    <li class="breadcrumb-item active">Payments</li>
                                 </ol>
                                 <!-- Breadcrumb end -->
                                 
@@ -566,144 +570,16 @@
                 <!-- Container-fluid start -->
                 <div class="container-fluid">
                     <div class="row">
-
-                        <div class="col-xl-3 xl-4 col-md-6 project-widgets">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="media">
-                                        <div class="widget-icon bg-success-light">
-                                            <i class="fas fa-home"></i>
-                                        </div>
-                                        <div class="media-body">
-                                            <span>
-                                                <span class="font-success">
-                                                    Total Plots
-                                                </span>
-                                            </span>
-                                            <h4>1,600</h4>
-                                        </div>
-                                    </div>
+                        <div class="col-lg-12">
+                            <div class="card"> 
+                                <div class="card-header pb-0">
+                                    <h5>Payment lists</h5>
                                 </div>
+                                 <div class="card-body payment-table">
+                                    <div id="batchDelete" class="transactions"></div>
+                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-3 xl-4 col-md-6 project-widgets">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="media">
-                                        <div class="widget-icon bg-success-light">
-                                            <i class="fas fa-users"></i>  </div>                                      <div class="media-body">
-                                            <span>
-                                                Clients
-                                            </span>
-                                            <h4>1,400</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 xl-4 col-md-6 project-widgets">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="media">
-                                        <div class="widget-icon bg-success-light">
-                                            <i class="fas fa-check-circle"></i>                                        </div>
-                                        <div class="media-body">
-                                            <span>
-                                                <span class="font-success">
-                                                    Accepted Terms
-                                                </span>
-                                            </span>
-                                            <h4>900</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 xl-4 col-md-6 project-widgets">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="media">
-                                        <div class="widget-icon bg-success-light">
-                                            <i class="fas fa-clock"></i></div>
-                                            <div class="media-body">
-                                            <span>Not Accepted
-                                            </span>
-                                            <h4>700</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 xl-4 col-md-6 project-widgets">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="media">
-                                        <div class="widget-icon bg-success-light">
-                                            <i class="fas fa-building"></i> </div>
-                                        <div class="media-body">
-                                            <span>
-                                                <span class="font-success">
-                                                    Typologies
-                                                </span>
-                                            </span>
-                                            <h4>10</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 xl-4 col-md-6 project-widgets">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="media">
-                                        <div class="widget-icon bg-success-light">
-                                            <i class="fas fa-question-circle"></i></div>
-                                        <div class="media-body">
-                                            <span>
-                                               to be Selected
-                                            </span>
-                                            <h4>1600</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 xl-4 col-md-6 project-widgets">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="media">
-                                        <div class="widget-icon bg-success-light">
-                                            <i class="fas fa-check-square"></i>                                        </div>
-                                        <div class="media-body">
-                                            <span>
-                                                <span class="font-success">
-                                                    Selected
-                                                </span>
-                                            </span>
-                                            <h4>700</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 xl-4 col-md-6 project-widgets">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="media">
-                                        <div class="widget-icon bg-success-light">
-                                            <i class="fas fa-check-square"></i> </div>
-                                        <div class="media-body">
-                                            <span>Pending
-                                            </span>
-                                            <h4>700</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        </div>
-
                     </div>
                 </div>
                 <!-- Container-fluid end -->
@@ -800,10 +676,9 @@
     <!-- sidebar js -->
     <script src="../assets/js/sidebar.js"></script>
 
-    <!-- apex chart js-->
-    <script src="../assets/js/chart/apex-chart/apex-chart.js"></script>
-    <script src="../assets/js/chart/apex-chart/stock-prices.js"></script>
-    <script src="../assets/js/admin-dashboard.js"></script>
+    <script src="../assets/js/jsgrid/jsgrid.min.js"></script>
+    <script src="../assets/js/jsgrid/griddata-payment.js"></script>
+    <script src="../assets/js/jsgrid/jsgrid-payment.js"></script>
 
     <!--admin js -->
     <script src="../assets/js/admin-script.js"></script>
