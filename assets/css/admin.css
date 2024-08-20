@@ -13415,7 +13415,7 @@ summary {
       left: -20px;
       background: rgba(245, 245, 245, 0.8);
       padding: 8px 10px;
-      color: #ff8c41;
+      color: #15ee93;
       min-width: 140px;
       max-width: 500px;
       z-index: 500;
@@ -13729,7 +13729,7 @@ summary {
         width: 0;
         background: #89c826; }
     .dropzone .dz-preview .dz-error-message {
-      color: #ff8c41;
+      color: #15ee93;
       display: none;
       top: 131px;
       left: -12px;
@@ -15410,16 +15410,16 @@ body.swal2-no-backdrop .swal2-shown {
   stroke-width: 60px; }
 
 .ct-series-a .ct-point, .ct-series-a .ct-line, .ct-series-a .ct-bar, .ct-series-a .ct-slice-donut {
-  stroke: #ff5c41; }
+  stroke: #00a761; }
 
 .ct-series-a .ct-slice-pie, .ct-series-a .ct-slice-donut-solid, .ct-series-a .ct-area {
-  fill: #ff5c41; }
+  fill: #00a761; }
 
 .ct-series-b .ct-point, .ct-series-b .ct-line, .ct-series-b .ct-bar, .ct-series-b .ct-slice-donut {
-  stroke: #ff8c41; }
+  stroke: #15ee93; }
 
 .ct-series-b .ct-slice-pie, .ct-series-b .ct-slice-donut-solid, .ct-series-b .ct-area {
-  fill: #ff8c41; }
+  fill: #15ee93; }
 
 .ct-series-c .ct-point, .ct-series-c .ct-line, .ct-series-c .ct-bar, .ct-series-c .ct-slice-donut {
   stroke: #5eac12; }
@@ -15446,58 +15446,58 @@ body.swal2-no-backdrop .swal2-shown {
   fill: #dc3545; }
 
 .ct-series-g .ct-point, .ct-series-g .ct-line, .ct-series-g .ct-bar, .ct-series-g .ct-slice-donut {
-  stroke: #ff5c41; }
+  stroke: #00a761; }
 
 .ct-series-g .ct-slice-pie, .ct-series-g .ct-slice-donut-solid, .ct-series-g .ct-area {
-  fill: #ff5c41; }
+  fill: #00a761; }
 
 .ct-series-h .ct-point, .ct-series-h .ct-line, .ct-series-h .ct-bar, .ct-series-h .ct-slice-donut {
-  stroke: #ff5c41; }
+  stroke: #00a761; }
 
 .ct-series-h .ct-slice-pie, .ct-series-h .ct-slice-donut-solid, .ct-series-h .ct-area {
-  fill: #ff5c41; }
+  fill: #00a761; }
 
 .ct-series-i .ct-point, .ct-series-i .ct-line, .ct-series-i .ct-bar, .ct-series-i .ct-slice-donut {
-  stroke: #ff5c41; }
+  stroke: #00a761; }
 
 .ct-series-i .ct-slice-pie, .ct-series-i .ct-slice-donut-solid, .ct-series-i .ct-area {
-  fill: #ff5c41; }
+  fill: #00a761; }
 
 .ct-series-j .ct-point, .ct-series-j .ct-line, .ct-series-j .ct-bar, .ct-series-j .ct-slice-donut {
-  stroke: #ff5c41; }
+  stroke: #00a761; }
 
 .ct-series-j .ct-slice-pie, .ct-series-j .ct-slice-donut-solid, .ct-series-j .ct-area {
-  fill: #ff5c41; }
+  fill: #00a761; }
 
 .ct-series-k .ct-point, .ct-series-k .ct-line, .ct-series-k .ct-bar, .ct-series-k .ct-slice-donut {
-  stroke: #ff5c41; }
+  stroke: #00a761; }
 
 .ct-series-k .ct-slice-pie, .ct-series-k .ct-slice-donut-solid, .ct-series-k .ct-area {
-  fill: #ff5c41; }
+  fill: #00a761; }
 
 .ct-series-l .ct-point, .ct-series-l .ct-line, .ct-series-l .ct-bar, .ct-series-l .ct-slice-donut {
-  stroke: #ff5c41; }
+  stroke: #00a761; }
 
 .ct-series-l .ct-slice-pie, .ct-series-l .ct-slice-donut-solid, .ct-series-l .ct-area {
-  fill: #ff5c41; }
+  fill: #00a761; }
 
 .ct-series-m .ct-point, .ct-series-m .ct-line, .ct-series-m .ct-bar, .ct-series-m .ct-slice-donut {
-  stroke: #ff5c41; }
+  stroke: #00a761; }
 
 .ct-series-m .ct-slice-pie, .ct-series-m .ct-slice-donut-solid, .ct-series-m .ct-area {
-  fill: #ff5c41; }
+  fill: #00a761; }
 
 .ct-series-n .ct-point, .ct-series-n .ct-line, .ct-series-n .ct-bar, .ct-series-n .ct-slice-donut {
-  stroke: #ff5c41; }
+  stroke: #00a761; }
 
 .ct-series-n .ct-slice-pie, .ct-series-n .ct-slice-donut-solid, .ct-series-n .ct-area {
-  fill: #ff5c41; }
+  fill: #00a761; }
 
 .ct-series-o .ct-point, .ct-series-o .ct-line, .ct-series-o .ct-bar, .ct-series-o .ct-slice-donut {
-  stroke: #ff5c41; }
+  stroke: #00a761; }
 
 .ct-series-o .ct-slice-pie, .ct-series-o .ct-slice-donut-solid, .ct-series-o .ct-area {
-  fill: #ff5c41; }
+  fill: #00a761; }
 
 .ct-square {
   display: block;
@@ -15863,14 +15863,14 @@ body.swal2-no-backdrop .swal2-shown {
   --theme-gradient2: linear-gradient(to right, var(--theme-default) 0%, var(--theme-default2) 100%);
   --theme-gradient3: linear-gradient(48deg, var(--theme-default) 0%, var(--theme-default2) 100%);
   --theme-gradient4: linear-gradient(to right, var(--theme-default) 25%, var(--theme-default2) 100%);
-  --theme-default3: #ff5c41;
-  --theme-default4: #ff8c41;
+  --theme-default3: #00a761;
+  --theme-default4: #15ee93;
   --theme-gradient5: linear-gradient(to right, var(--theme-default3) 0%, var(--theme-default4) 51%, var(--theme-default3) 100%);
   --theme-gradient6: linear-gradient(to right, var(--theme-default3) 0%, var(--theme-default4) 100%);
   --theme-gradient7: linear-gradient(90deg, var(--theme-default3) 25%, var(--theme-default4) 100%);
   --theme-default5: #5eac12;
-  --theme-default6: #f35d43;
-  --theme-default7: #f34451;
+  --theme-default6: #079f60;
+  --theme-default7: #22a06c;
   --theme-gradient8: linear-gradient(to right, var(--theme-default6) 0%, var(--theme-default7) 51%, var(--theme-default6) 100%);
   --theme-gradient9: linear-gradient(90deg, var(--theme-default6) 0%, var(--theme-default7) 100%);
   --theme-default8: #2c2e97;
@@ -17552,7 +17552,7 @@ form label {
     z-index: 1;
     width: 7px;
     height: 7px;
-    background: #ff5c41;
+    background: #00a761;
     border-radius: 50%; }
   .radio_animated:after {
     content: "";
@@ -18976,7 +18976,7 @@ input[type='radio'].radio_animated {
       -webkit-transition: all 0.3s ease;
       transition: all 0.3s ease; }
       .single-property-section .left-single ul li:hover {
-        color: #ff5c41;
+        color: #00a761;
         -webkit-transform: scale(1.02);
                 transform: scale(1.02);
         -webkit-transition: all 0.3s ease;
